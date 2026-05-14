@@ -1,0 +1,99 @@
+
+/* =========================
+   LOGO IMAGE
+========================= */
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: cover;
+
+  margin-right: 10px;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  padding: 80px 40px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  background: var(--bg-main);
+}
+
+
+/* =========================
+   CONTACT CARD
+========================= */
+
+.contact-card {
+  background: var(--card-bg);
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  background: #222b3d;
+}
+
+
+/* TITLE */
+.contact-card h3 {
+  color: var(--accent-red);
+  margin-bottom: 10px;
+}
+
+
+/* TEXT */
+.contact-card p {
+  color: var(--text-secondary);
+}
+
+
+/* =========================
+   PAGE HERO
+   ⚠️ REMOVE IF ALREADY IN GLOBAL.CSS
+========================= */
+
+/*
+.page-hero {
+  padding: 140px 40px 80px;
+  text-align: center;
+
+  background: radial-gradient(
+    circle at center,
+    var(--bg-secondary) 0%,
+    var(--bg-main) 70%
+  );
+
+  color: var(--text-main);
+}
+*/
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+}

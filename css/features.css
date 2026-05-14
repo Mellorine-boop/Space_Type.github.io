@@ -1,0 +1,84 @@
+/* =========================
+   FEATURES PAGE GRID
+========================= */
+
+.features-page {
+  padding: 80px 40px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  background: var(--bg-main);
+}
+
+
+/* =========================
+   FEATURE BOX
+========================= */
+
+.feature-box {
+  background: var(--card-bg);
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  background: #222b3d;
+}
+
+
+/* TITLE */
+.feature-box h3 {
+  margin-bottom: 10px;
+
+  color: var(--accent-red);
+}
+
+
+/* TEXT */
+.feature-box p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+
+/* =========================
+   PAGE HERO (REMOVE IF GLOBAL EXISTS)
+========================= */
+
+/* ❗ REMOVE THIS IF YOU ALREADY HAVE IT IN global.css */
+/*
+.page-hero {
+  padding: 140px 40px 80px;
+  text-align: center;
+
+  background: radial-gradient(
+    circle at center,
+    var(--bg-secondary) 0%,
+    var(--bg-main) 70%
+  );
+
+  color: var(--text-main);
+}
+*/
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .features-page {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+}

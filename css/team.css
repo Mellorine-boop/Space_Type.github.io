@@ -1,0 +1,132 @@
+/* =========================
+   TEAM SECTION
+========================= */
+
+.team-section {
+  padding: 80px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: var(--bg-main);
+
+  /* prevents footer “floating” issue */
+  min-height: 60vh;
+}
+
+
+/* =========================
+   TEAM CARD
+========================= */
+
+.team-card {
+  width: 220px;
+  background: var(--card-bg);
+  border-radius: 12px;
+
+  padding: 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transition: 0.3s;
+  cursor: pointer;
+
+  /* IMPORTANT: prevents overflow weirdness */
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover */
+.team-card:hover {
+  transform: translateY(-6px);
+  background: #222b3d;
+}
+
+
+/* IMAGE (if you add later) */
+.team-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* NICKNAME */
+.team-card h3 {
+  color: var(--accent-red);
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+
+/* ROLE */
+.team-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+
+/* QUOTE (optional future use) */
+.team-card .quote {
+  font-size: 12px;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+
+/* =========================
+   PAGE HERO (TEAM)
+========================= */
+
+.page-hero {
+  padding: calc(var(--header-height) + 60px) 40px 80px;
+  text-align: center;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+
+/* TITLE */
+.page-hero h2 {
+  font-size: 48px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* SUBTEXT */
+.page-hero p {
+  font-size: 16px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+
+/* ACCENT LINE */
+.page-hero h2::after {
+  content: "";
+  display: block;
+
+  width: 80px;
+  height: 3px;
+
+  background: var(--accent-red);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .team-card {
+    width: 90%;
+  }
+}

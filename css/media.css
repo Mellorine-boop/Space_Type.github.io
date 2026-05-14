@@ -1,0 +1,84 @@
+/* =========================
+   PAGE HERO (ONLY IF NOT GLOBAL)
+   ⚠️ REMOVE IF ALREADY IN global.css
+========================= */
+
+/*
+.page-hero {
+  padding: 140px 40px 80px;
+  text-align: center;
+
+  background: radial-gradient(
+    circle at center,
+    var(--bg-secondary) 0%,
+    var(--bg-main) 70%
+  );
+
+  color: var(--text-main);
+}
+*/
+
+
+/* =========================
+   MEDIA SECTION
+========================= */
+
+.media-section {
+  padding: 80px 40px;
+
+  text-align: center;
+
+  background: var(--bg-secondary);
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-container {
+  margin-top: 30px;
+}
+
+
+/* =========================
+   GALLERY GRID
+========================= */
+
+.gallery {
+  margin-top: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .media-section {
+    padding: 60px 20px;
+  }
+}

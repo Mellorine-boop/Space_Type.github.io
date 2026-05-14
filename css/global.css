@@ -1,0 +1,255 @@
+/* =========================
+   GOOGLE FONTS
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+
+/* =========================
+   COLOR SYSTEM
+========================= */
+:root {
+  --bg-main: #0B0F19;
+  --bg-secondary: #121826;
+  --card-bg: #1A2233;
+
+  --accent-red: #FF4655;
+  --accent-blue: #4FD1FF;
+
+  --text-main: #FFFFFF;
+  --text-secondary: #B8C1D1;
+
+  --header-height: 80px;
+}
+
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   GLOBAL LAYOUT (FIXED)
+========================= */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg-main);
+  color: var(--text-main);
+
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+h3, h4, .nav-links a, .logo {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+p, li, input, textarea {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-secondary);
+}
+
+.btn-primary,
+.btn-download,
+button {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
+/* =========================
+   HEADER / NAVBAR (FIXED, SAME STYLE)
+========================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 40px;
+}
+
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  color: var(--text-main);
+  transition: 0.3s;
+}
+
+.logo:hover {
+  color: var(--accent-red);
+}
+
+
+/* NAV */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-red);
+}
+
+
+/* BURGER */
+.burger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* =========================
+   BUTTONS (UNCHANGED STYLE)
+========================= */
+.btn-download {
+  background: var(--accent-red);
+  padding: 8px 15px;
+  border-radius: 6px;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-download:hover {
+  background: #e63b4a;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent-red);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e63b4a;
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   PAGE HERO (FIXED SPACING)
+========================= */
+.page-hero {
+  padding: calc(var(--header-height) + 60px) 40px 80px;
+  text-align: center;
+  background: var(--bg-main);
+}
+
+.page-hero h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.page-hero p {
+  opacity: 0.7;
+}
+
+
+/* =========================
+   FOOTER (FIXED BEHAVIOR)
+========================= */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .page-hero h2 {
+    font-size: 32px;
+  }
+
+  .features-grid,
+  .features-page,
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}

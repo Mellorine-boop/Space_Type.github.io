@@ -1,0 +1,83 @@
+/* =========================
+   PAGE HERO (FIXED)
+========================= */
+
+.page-hero {
+  padding: 140px 40px 80px; /* prevents navbar overlap */
+  text-align: center;
+
+  background: radial-gradient(
+    circle at center,
+    var(--bg-secondary) 0%,
+    var(--bg-main) 70%
+  );
+
+  color: var(--text-main);
+}
+
+/* HERO TITLE */
+.page-hero h2 {
+  font-size: 44px;
+  letter-spacing: 3px;
+
+  margin-bottom: 10px;
+}
+
+/* HERO SUBTEXT */
+.page-hero p {
+  color: var(--text-secondary);
+  max-width: 700px;
+
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   ABOUT SECTIONS
+========================= */
+
+.about-section {
+  padding: 80px 40px;
+  text-align: center;
+
+  background: var(--bg-secondary);
+}
+
+.about-section.dark {
+  background: var(--bg-main);
+}
+
+/* SECTION TEXT */
+.about-section h2 {
+  margin-bottom: 15px;
+  color: var(--text-main);
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto;
+
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .page-hero {
+    padding: 120px 20px 60px;
+  }
+
+  .page-hero h2 {
+    font-size: 32px;
+  }
+
+  .about-section {
+    padding: 60px 20px;
+  }
+}
